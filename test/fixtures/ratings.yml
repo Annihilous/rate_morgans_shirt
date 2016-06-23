@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  score: 1
+  user_id: 1
+  shirt_id: 1
+  rated_on_dts: 2016-06-23 09:41:14
+
+two:
+  score: 1
+  user_id: 1
+  shirt_id: 1
+  rated_on_dts: 2016-06-23 09:41:14

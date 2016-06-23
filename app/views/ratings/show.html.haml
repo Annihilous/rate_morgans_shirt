@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Score:
+  = @rating.score
+%p
+  %b User:
+  = @rating.user_id
+%p
+  %b Shirt:
+  = @rating.shirt_id
+%p
+  %b Rated on dts:
+  = @rating.rated_on_dts
+
+= link_to 'Edit', edit_rating_path(@rating)
+\|
+= link_to 'Back', ratings_path

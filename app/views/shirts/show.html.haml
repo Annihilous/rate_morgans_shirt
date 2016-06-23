@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Description:
+  = @shirt.description
+%p
+  %b Primary color:
+  = @shirt.primary_color
+%p
+  %b Image:
+  = @shirt.image
+
+= link_to 'Edit', edit_shirt_path(@shirt)
+\|
+= link_to 'Back', shirts_path
