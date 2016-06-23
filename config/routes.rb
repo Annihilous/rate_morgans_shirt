@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :shirts
-  resources :ratings
+  resources :shirts, except: [:destroy]
+  resources :ratings, except: [:show]
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations', passwords: 'users/passwords' }
+
+  root 'ratings#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

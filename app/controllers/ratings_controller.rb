@@ -7,13 +7,11 @@ class RatingsController < ApplicationController
     @ratings = Rating.all
   end
 
-  # GET /ratings/1
-  # GET /ratings/1.json
-  def show
-  end
-
   # GET /ratings/new
   def new
+    if current_user.is_morgan
+      redirect_to ratings_path
+    end
     @rating = Rating.new
   end
 

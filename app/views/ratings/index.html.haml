@@ -18,10 +18,3 @@
         %td= rating.user_id
         %td= rating.shirt_id
         %td= rating.rated_on_dts
-        %td= link_to 'Show', rating
-        %td= link_to 'Edit', edit_rating_path(rating)
-        %td= link_to 'Destroy', rating, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Rating', new_rating_path

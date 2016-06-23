@@ -1,5 +1,5 @@
 class ShirtsController < ApplicationController
-  before_action :set_shirt, only: [:show, :edit, :update, :destroy]
+  before_action :set_shirt, only: [:show, :edit, :update]
 
   # GET /shirts
   # GET /shirts.json
@@ -48,16 +48,6 @@ class ShirtsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @shirt.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # DELETE /shirts/1
-  # DELETE /shirts/1.json
-  def destroy
-    @shirt.destroy
-    respond_to do |format|
-      format.html { redirect_to shirts_url, notice: 'Shirt was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
