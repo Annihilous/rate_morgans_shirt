@@ -12,7 +12,9 @@
     
     = csrf_meta_tags
   %body
-    .container
+
+  .text-center
+  = render 'layouts/alerts'    .container
       = render 'layouts/navigation'
 
       = yield
