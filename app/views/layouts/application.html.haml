@@ -14,7 +14,7 @@
   %body
 
   .text-center
-  = render 'layouts/alerts'    .container
-      = render 'layouts/navigation'
-
+    = render 'layouts/alerts'
+    = render 'layouts/navigation'
+    #yield-content.container
       = yield
