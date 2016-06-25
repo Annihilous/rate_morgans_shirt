@@ -1,0 +1,32 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container-fluid
+    / Brand and toggle get grouped for better mobile display
+    .navbar-header
+      %button.navbar-toggle.collapsed{:type => "button"}
+        %span.sr-only Toggle navigation
+        %img{:src => "/assets/icon-menu.png"}
+      .navbar-brand
+        = link_to "RMS", root_url
+      .navbar-book.book.hidden-md.hidden-lg.hidden-sm
+        %img{:src => "/assets/icon-book.png"}
+        %img.hidden{:src => "/assets/icon-book-active.png"}
+
+    / Collect the nav links, forms, and other content for toggling
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        - if current_user && current_user.is_morgan
+          %li
+            = link_to "Shirts", shirts_path
+          %li
+            = link_to "Ratings", ratings_path
+        %li
+          = link_to "About", '#'
+        - if user_signed_in?
+          %li
+            = link_to 'Log Out', destroy_user_session_path, method: :delete, class: "nav-link"
+          %li
+            = link_to edit_user_registration_path do
+              .fa.fa-gear
+        - else
+          %li
+            = link_to 'Sign In', new_user_session_path
